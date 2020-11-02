@@ -128,20 +128,17 @@ In the code above, you will notice that the `register_user` and `login_user` fun
 # Requests to http://localhost:8000/register will be routed to the register_user function
 path('register', register_user)
 # Requests to http://localhost:8000/login will be routed to the login_user function
-path('register', register_user)
-```
-
-## Starting the Server
-
-Run the following command in your `levelup` directory to start the Django application.
-
-```sh
-python manage.py runserver
+path('login', register_user)
 ```
 
 ## Authenticating a User
 
 Now you can test this out as an actual Gamer who would be using the application. Launch your initial React client, and try to log in with the account that was created with your fixtures.
+
+You will need to start the django server:
+```
+python manage.py runserver
+```
 
 Username is `me@me.com`
 
